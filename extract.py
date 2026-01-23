@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # Выбор API: "gemini" или "mistral"
 USE_API = "gemini"
 
-GEMINI_API_KEY = "AIzaSyDZ64jYSAwJraVBzehE0SAIIsyV6Fgz96E"
+GEMINI_API_KEY = "AIzaSyC_haKiGa9WMP0oG5ZTE7XBpwu3K98v2PU"
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 
@@ -149,22 +149,33 @@ def image_to_base64(image: Image.Image) -> str:
     return base64.b64encode(buffer.getvalue()).decode("utf-8")
 
 
-def extract_text_with_gemini(image: Image.Image, page_num: int) -> str:
-    """Извлекаем текст через Gemini Vision API"""
+def extract_text_with_gemini(image: Image.Image, page_num: int, max_retries: int = 5) -> str:
+    """Извлекаем текст через Gemini Vision API с retry логикой"""
     prompt = """Извлеки ВЕСЬ текст с этой страницы документа.
 Это официальный документ на казахском и русском языках.
 Игнорируй подписи и печати - извлекай только печатный текст.
 Сохраняй нумерацию разделов (1., 2., 3.) и подразделов (1.1., 1.2., 2.1.).
 Выведи только текст, без комментариев."""
 
-    try:
-        response = gemini_model.generate_content([prompt, image])
-        text = response.text
-        logger.debug(f"Страница {page_num}: {len(text)} символов")
-        return text
-    except Exception as e:
-        logger.warning(f"Ошибка страница {page_num}: {e}")
-        return ""
+    for attempt in range(max_retries):
+        try:
+            response = gemini_model.generate_content([prompt, image])
+            text = response.text
+            logger.debug(f"Страница {page_num}: {len(text)} символов")
+            return text
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str or "quota" in error_str.lower() or "rate" in error_str.lower():
+                # Извлекаем время ожидания из ошибки или используем экспоненциальный backoff
+                wait_time = min(60 * (2 ** attempt), 300)  # макс 5 минут
+                logger.warning(f"{Fore.YELLOW}⏳ Rate limit, ждём {wait_time} сек... (попытка {attempt + 1}/{max_retries}){Style.RESET_ALL}")
+                time.sleep(wait_time)
+            else:
+                logger.warning(f"Ошибка страница {page_num}: {e}")
+                return ""
+
+    logger.error(f"Не удалось обработать страницу {page_num} после {max_retries} попыток")
+    return ""
 
 
 def extract_text_with_mistral(image: Image.Image, page_num: int) -> str:
@@ -367,7 +378,7 @@ if __name__ == "__main__":
                         text = extract_text_with_mistral(image, page_num)
 
                     full_text += text + "\n"
-                    time.sleep(4)  # Пауза между запросами
+                    time.sleep(6)  # Пауза между запросами для избежания rate limit
 
             clean_text = keep_cyrillic_kazakh(full_text)
             rows = parse_sections_hierarchical(clean_text)
