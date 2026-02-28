@@ -1,0 +1,31 @@
+ОТЧЕТ О МАССОВОМ ИМПОРТЕ
+================================================================================
+Дата: 2026-02-28 19:35:01
+Всего файлов: 4
+Успешно: 4
+Ошибок: 0
+
+
+Положение УРДИ.docx
+  Организация: КГУ "Управление развития дорожной инфраструктуры города Алматы"
+  Статус: success
+  ID записи: 6836
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6836/edit
+
+Положение УРОП.docx
+  Организация: КГУ "Управление развития общественных пространств города Алматы"
+  Статус: success
+  ID записи: 6837
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6837/edit
+
+Положение УСтроительства.docx
+  Организация: КГУ "Управление строительсва города Алматы"
+  Статус: success
+  ID записи: 6838
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6838/edit
+
+Положение УТ.docx
+  Организация: КГУ "Управление туризма города Алматы"
+  Статус: success
+  ID записи: 6839
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6839/edit

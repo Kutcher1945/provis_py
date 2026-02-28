@@ -1,0 +1,25 @@
+ОТЧЕТ О МАССОВОМ ИМПОРТЕ
+================================================================================
+Дата: 2026-02-28 18:30:26
+Всего файлов: 3
+Успешно: 3
+Ошибок: 0
+
+
+Положение УАиГ.docx
+  Организация: КГУ  "Управление архитектуры и градостроительства города Алматы"
+  Статус: success
+  ID записи: 6821
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6821/edit
+
+Положение УВП 2025.docx
+  Организация: КГУ "Управление внутренней политики города Алматы"
+  Статус: success
+  ID записи: 6822
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6822/edit
+
+Положение УВП 2026.docx
+  Организация: КГУ "Управление внутренней политики города Алматы"
+  Статус: success
+  ID записи: 6823
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6823/edit

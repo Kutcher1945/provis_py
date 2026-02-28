@@ -1,0 +1,36 @@
+ОТЧЕТ О МАССОВОМ ИМПОРТЕ
+================================================================================
+Дата: 2026-02-28 19:39:34
+Всего файлов: 5
+Успешно: 4
+Ошибок: 1
+
+
+Положение УЭиВ.docx
+  Организация: КГУ "Управление экологии и окружающей среды города Алматы"
+  Статус: success
+  ID записи: 6840
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6840/edit
+
+Положение УЭиОС.docx
+  Организация: КГУ "Управление экологии и окружающей среды города Алматы"
+  Статус: success
+  ID записи: 6841
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6841/edit
+
+Положение УЭиФ.docx
+  Организация: КГУ "Управление экологии и окружающей среды города Алматы"
+  Статус: success
+  ID записи: 6842
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6842/edit
+
+Положение о «Аппарат акима города Алматы».docx
+  Организация: КГУ Аппарат акима Ауэзовского района
+  Статус: success
+  ID записи: 6843
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6843/edit
+
+Положение о Аппарат акима города Алматы.docx
+  Организация: КГУ Аппарат акима Ауэзовского района
+  Статус: exception
+  Ошибка: File is not a zip file

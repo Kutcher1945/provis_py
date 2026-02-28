@@ -1,0 +1,25 @@
+ОТЧЕТ О МАССОВОМ ИМПОРТЕ
+================================================================================
+Дата: 2026-02-28 18:50:55
+Всего файлов: 3
+Успешно: 3
+Ошибок: 0
+
+
+Положение УЗО.docx
+  Организация: КГУ "Управление земельных отношений города Алматы" 
+  Статус: success
+  ID записи: 6827
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6827/edit
+
+Положение УЗСП.docx
+  Организация: КГУ "Управление занятости и социальных программ города Алматы"
+  Статус: success
+  ID записи: 6828
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6828/edit
+
+Положение УК.docx
+  Организация: КГУ "Управление культуры города Алматы"
+  Статус: success
+  ID записи: 6829
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6829/edit

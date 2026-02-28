@@ -1,0 +1,30 @@
+ОТЧЕТ О МАССОВОМ ИМПОРТЕ
+================================================================================
+Дата: 2026-02-28 19:31:47
+Всего файлов: 4
+Успешно: 3
+Ошибок: 1
+
+
+Положение УО.docx
+  Организация: КГУ "Управление образования города Алматы" 
+  Статус: success
+  ID записи: 6833
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6833/edit
+
+Положение УОДДиПТ.docx
+  Организация: Управление организации дорожного движения и пассажирского транспорта города Алматы
+  Статус: success
+  ID записи: 6834
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6834/edit
+
+Положение УОЗ.docx
+  Организация: КГУ "Управление общественного здравоохранения города Алматы"
+  Статус: success
+  ID записи: 6835
+  URL: https://planning.gov.kz/rgffront#/rgffront/filter/positions/department/6835/edit
+
+Положение УПиИ.docx
+  Организация: КГУ "Управление предпринимательства и  инвестий города Алматы"
+  Статус: exception
+  Ошибка: file '/home/adilannister/ml_engineering/polozhenia/parse_functioons/data/Положение УПиИ.docx' is not a Word file, content type is 'application/vnd.openxmlformats-officedocument.themeManager+xml'
