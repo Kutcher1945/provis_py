@@ -569,12 +569,16 @@ def bulk_import():
                     result_entry['warnings'] = '; '.join(warnings)
 
                 results.append(result_entry)
+            elif result and result.get('responseCode') == 409:
+                print(f"  ⚠ ДУБЛИКАТ: запись уже существует для этой организации")
+                skipped_files.append({'file': file_path.name, 'reason': 'Запись уже существует (дубликат 409)'})
             else:
-                print(f"  ✗ ОШИБКА: {result}")
+                error_msg = result.get('errorMsg', str(result)) if isinstance(result, dict) else str(result)
+                print(f"  ✗ ОШИБКА: {error_msg}")
                 results.append({
                     'file': file_path.name,
                     'status': 'error',
-                    'error': str(result),
+                    'error': error_msg,
                     'gu_name': gu_name
                 })
 
