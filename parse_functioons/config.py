@@ -6,8 +6,8 @@ Configuration settings for planning.gov.kz API
 BASE_URL = "https://planning.gov.kz"
 
 # Authentication credentials
-IIN = "870721401515"  # Change to your actual IIN
-PASSWORD = "Alm@ty#365!"  # Change to your actual password
+IIN = "971123400297"  # Change to your actual IIN
+PASSWORD = "Almaty2026*"  # Change to your actual password
 
 # Default parameters
 DEFAULT_LANG = "ru"
